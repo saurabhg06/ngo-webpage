@@ -5,13 +5,23 @@ body {
 }
 
 .navbar {
-    background-color: #0B5D3B;
+    background-color: #ffffff !important;
 }
 
 .navbar-brand,
 .navbar-nav .nav-link {
-    color: #ffffff !important;
+    color: #000000 !important;
     font-weight: 600;
+}
+
+/* Ensure navbar toggler is visible on mobile */
+.navbar-toggler {
+    border-color: rgba(0,0,0,.1);
+    z-index: 1050;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.25rem rgba(25, 135, 84, 0.25);
 }
 
 .hero {
@@ -179,6 +189,25 @@ ol li {
 .logo-icon {
     height: 60px;   /* increase the height as needed */
     width: auto;    /* maintain the aspect ratio */
+}
+
+/* Mobile navbar menu styling */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-nav .nav-item {
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-logo {
+        transform: scale(1.8);
+    }
 }
 
 
